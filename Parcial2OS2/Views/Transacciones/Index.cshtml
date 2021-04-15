@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Parcial2OS2.Models.Transacciones>
+
+@{
+    ViewData["Title"] = "Transacciones";
+}
+
+<h1>Transacciones</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_Transaccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_Articulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Monto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_Transaccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_Articulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID_Transaccion">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID_Transaccion">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID_Transaccion">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
