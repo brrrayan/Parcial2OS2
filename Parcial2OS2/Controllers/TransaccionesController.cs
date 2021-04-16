@@ -21,6 +21,8 @@ namespace Parcial2OS2.Controllers
         // GET: Transacciones
         public async Task<IActionResult> Index()
         {
+            ViewBag.ListaArticles = _context.Articulos.ToList();  
+            //Cree este Viewbag para que me muestre los valores en lugar de los id en la tabla, lo utilizo en la vista index.html      
             return View(await _context.Transacciones.ToListAsync());
         }
 

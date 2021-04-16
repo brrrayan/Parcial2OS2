@@ -37,8 +37,11 @@ namespace Parcial2OS2.Models
         [Display(Name = "Monto de Asiento")]
         public int MontoAsiento { get; set; }
 
-        
+        //[display(name = "id asiento")]
+        //public int idasiento { get; set; }
+
         public bool Estado { get; set; }
+
 
         [NotMapped]
         public List<SelectListItem> ListOfInventarios { get; set; }

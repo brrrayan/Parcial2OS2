@@ -12,7 +12,7 @@ namespace Parcial2OS2.Data
         public static async Task WeSservicePublicoAsync()
         {
 
-        var url = "https://app.swaggerhub.com/apis/ECompres/contabilidad/v1#/AccountingEntry/post_api_accountingEntry";
+        var url = "https://eb6ec1171113.ngrok.io/api/accountingEntry";
 
             using (var http = new HttpClient())
             {

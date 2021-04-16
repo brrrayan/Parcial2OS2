@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Transacciones";
+    List<Parcial2OS2.Models.Articulos> Articles = ViewBag.ListaArticles;
 }
 
 <h1>Transacciones</h1>
@@ -37,7 +38,7 @@
                 @Html.DisplayFor(modelItem => item.Tipo_Transaccion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ID_Articulo)
+                @Articles.Find(x => x.ID_Articulo == item.ID_Articulo).Descripcion
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Fecha)
